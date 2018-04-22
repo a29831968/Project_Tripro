@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "865161066007",
+    "firebase_url": "https://tripro-61a47.firebaseio.com",
+    "project_id": "tripro-61a47",
+    "storage_bucket": "tripro-61a47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:865161066007:android:73192da7172f5752",
+        "android_client_info": {
+          "package_name": "tw.com.flag.tripro"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "865161066007-a5kdl5p2ee3bfhvsps6em9lr0c3jdigk.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "tw.com.flag.tripro",
+            "certificate_hash": "98a7eded66dafac482fdb58d0966653013e08ee1"
+          }
+        },
+        {
+          "client_id": "865161066007-p3t2cpt2cd3jkv5tp9su0ocqb8elpdf3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2hrvV9byjql5GvAwZLtGTCVJXNL0doWY"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "865161066007-p3t2cpt2cd3jkv5tp9su0ocqb8elpdf3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

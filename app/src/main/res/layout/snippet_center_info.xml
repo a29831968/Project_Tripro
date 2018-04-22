@@ -1,0 +1,116 @@
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/grey_border"
+        android:padding="10dp">
+
+
+        <TextView
+            android:id="@+id/tx_update"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Update Photo..."
+            android:textColor="@color/link_blue"
+            android:textSize="18sp" />
+
+        <ImageView
+            android:id="@+id/trip_photo"
+            android:layout_width="400dp"
+            android:layout_height="250dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/grey_border"
+            android:scaleType="centerCrop" />
+
+
+        <!-- username section -->
+        <RelativeLayout
+            android:id="@+id/relLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/trip_photo"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/grey_border_bottom">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_title" />
+
+            <EditText
+                android:id="@+id/trip_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:background="@null"
+                android:hint="Trip name"
+                android:inputType="textNoSuggestions" />
+
+        </RelativeLayout>
+
+
+        <!-- display_name section -->
+        <RelativeLayout
+            android:id="@+id/relLayout2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/relLayout1"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/grey_border_bottom">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_day" />
+
+            <EditText
+                android:id="@+id/trip_day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:background="@null"
+                android:hint="Trip day"
+                android:inputType="number" />
+
+        </RelativeLayout>
+
+
+        <!-- website section -->
+        <RelativeLayout
+            android:id="@+id/relLayout3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@+id/relLayout2"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/grey_border_bottom">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/ic_start" />
+
+            <EditText
+                android:id="@+id/start_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="60dp"
+                android:background="@null"
+                android:text="Start date"
+                android:textSize="20sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+</merge>
