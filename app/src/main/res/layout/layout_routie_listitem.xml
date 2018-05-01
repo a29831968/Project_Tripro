@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:weightSum="3"
+    android:layout_marginLeft="3dp"
+    android:layout_marginRight="3dp"
+    android:layout_marginTop="10dp"
+    android:background="@drawable/blue_border">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txv_origin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center|left"
+            android:text="departure display"
+            android:textSize="19dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/grey_border_bottom"/>
+
+        <Button
+            android:id="@+id/btn_edit"
+            android:layout_margin="5dp"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="Edit routie"
+            android:layout_weight="2"
+            android:background="@drawable/white_rounded_button"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txv_time"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="routie time display"
+            android:textSize="15dp"
+            android:gravity="center_vertical"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/grey_border_bottom"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/txv_destination"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3"
+            android:gravity="center|left"
+            android:text="arrival display"
+            android:textSize="19dp"
+            android:layout_margin="5dp"
+            android:background="@drawable/grey_border_bottom"/>
+
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/btn_routie"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/white_rounded_button"
+            android:text="Show routie" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

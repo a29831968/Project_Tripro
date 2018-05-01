@@ -52,6 +52,9 @@ public class GalleryFragment extends Fragment {
     private String mAppend = "file:/";
     private String mSelectedImage;
 
+    //for extra
+    private String trip_key;
+
 
     @Nullable
     @Override
@@ -64,6 +67,10 @@ public class GalleryFragment extends Fragment {
         mProgressBar.setVisibility(View.GONE);
         directories = new ArrayList<>();
         Log.d(TAG, "onCreateView: started.");
+
+        // get trip_key first
+        trip_key=getActivity().getIntent().getStringExtra(getString(R.string.trip_key));
+        Log.d(TAG, "onCreateView: trip_key: "+trip_key);
 
         ImageView shareClose = (ImageView) view.findViewById(R.id.ivCloseShare);
         shareClose.setOnClickListener(new View.OnClickListener() {
@@ -84,6 +91,7 @@ public class GalleryFragment extends Fragment {
                 if(isRootTask()){
                     Intent intent = new Intent(getActivity(), NextActivity.class);
                     intent.putExtra(getString(R.string.selected_image), mSelectedImage);
+                    intent.putExtra(getString(R.string.trip_key),trip_key);
                     startActivity(intent);
                 }else{
                     Intent intent = new Intent(getActivity(), AccountSettingsActivity.class);

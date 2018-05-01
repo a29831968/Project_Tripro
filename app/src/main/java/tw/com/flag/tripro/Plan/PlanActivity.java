@@ -50,7 +50,7 @@ public class PlanActivity extends AppCompatActivity{
             verifyPermissions(Permissions.PERMISSIONS);
         }
 
-        setupBottomNavigationView();
+        //setupBottomNavigationView();
     }
     /**
      * return the current tab number
@@ -140,9 +140,11 @@ public class PlanActivity extends AppCompatActivity{
         }
     }
 
+
     /**
      * BottomNavigationView setup
      */
+
     private void setupBottomNavigationView(){
         Log.d(TAG, "setupBottomNavigationView: setting up BottomNavigationView");
         BottomNavigationViewEx bottomNavigationViewEx = (BottomNavigationViewEx) findViewById(R.id.bottomNavViewBar);
@@ -154,4 +156,5 @@ public class PlanActivity extends AppCompatActivity{
         MenuItem menuItem = menu.getItem(ACTIVITY_NUM);
         menuItem.setChecked(true);
     }
+
 }

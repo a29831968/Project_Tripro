@@ -175,6 +175,7 @@ public class ProfileFragment extends Fragment {
                         photo.setUser_id(objectMap.get(getString(R.string.field_user_id)).toString());
                         photo.setDate_created(objectMap.get(getString(R.string.field_date_created)).toString());
                         photo.setImage_path(objectMap.get(getString(R.string.field_image_path)).toString());
+                        photo.setTrip_key(objectMap.get("trip_key").toString());
 
                         ArrayList<Comment> comments = new ArrayList<Comment>();
                         for (DataSnapshot dSnapshot : singleSnapshot

@@ -50,6 +50,10 @@ public class NextActivity extends AppCompatActivity {
     private Bitmap bitmap;
     private Intent intent;
 
+
+    //for extra
+    private String trip_key;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -57,7 +61,7 @@ public class NextActivity extends AppCompatActivity {
         mFirebaseMethods = new FirebaseMethods(NextActivity.this);
         mCaption = (EditText) findViewById(R.id.caption) ;
 
-        setupFirebaseAuth();
+
 
         ImageView backArrow = (ImageView) findViewById(R.id.ivBackArrow);
         backArrow.setOnClickListener(new View.OnClickListener() {
@@ -80,11 +84,13 @@ public class NextActivity extends AppCompatActivity {
 
                 if(intent.hasExtra(getString(R.string.selected_image))){
                     imgUrl = intent.getStringExtra(getString(R.string.selected_image));
-                    mFirebaseMethods.uploadNewPhoto(getString(R.string.new_photo), caption, imageCount, imgUrl,null);
+                    Log.d(TAG, " Going to the FirebaseMethods.uploadNewPhoto: "+ trip_key);
+                    mFirebaseMethods.uploadNewPhoto(getString(R.string.new_photo), caption, imageCount, imgUrl,null,trip_key);
                 }
                 else if(intent.hasExtra(getString(R.string.selected_bitmap))){
                     bitmap = (Bitmap) intent.getParcelableExtra(getString(R.string.selected_bitmap));
-                    mFirebaseMethods.uploadNewPhoto(getString(R.string.new_photo), caption, imageCount, null,bitmap);
+                    Log.d(TAG, " Going to the FirebaseMethods.uploadNewPhoto: "+ trip_key);
+                    mFirebaseMethods.uploadNewPhoto(getString(R.string.new_photo), caption, imageCount, null,bitmap , trip_key);
                 }
 
 
@@ -129,6 +135,10 @@ public class NextActivity extends AppCompatActivity {
             Log.d(TAG, "setImage: got new bitmap");
             image.setImageBitmap(bitmap);
         }
+        // get trip_key first
+        trip_key=intent.getStringExtra(getString(R.string.trip_key));
+        Log.d(TAG, "setImage: trip_key: "+trip_key);
+        setupFirebaseAuth();
     }
 
      /*

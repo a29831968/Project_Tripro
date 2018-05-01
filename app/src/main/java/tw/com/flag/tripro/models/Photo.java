@@ -17,6 +17,7 @@ public class Photo implements Parcelable {
     private String photo_id;
     private String user_id;
     private String tags;
+    private String trip_key;
     private List<Like> likes;
     private List<Comment> comments;
 
@@ -25,8 +26,10 @@ public class Photo implements Parcelable {
 
     }
 
+
+
     public Photo(String caption, String date_created, String image_path, String photo_id,
-                 String user_id, String tags, List<Like> likes, List<Comment> comments) {
+                 String user_id, String tags, List<Like> likes, List<Comment> comments, String trip_key) {
         this.caption = caption;
         this.date_created = date_created;
         this.image_path = image_path;
@@ -35,6 +38,14 @@ public class Photo implements Parcelable {
         this.tags = tags;
         this.likes = likes;
         this.comments = comments;
+        this.trip_key=trip_key;
+    }
+    public String getTrip_key() {
+        return trip_key;
+    }
+
+    public void setTrip_key(String trip_key) {
+        this.trip_key = trip_key;
     }
 
     protected Photo(Parcel in) {

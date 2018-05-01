@@ -246,7 +246,8 @@ public class TripActivity extends AppCompatActivity{
                 Log.d(TAG, "FirebaseRecyclerView: setting up.");
 
                 // get the key which is reference to the selected trip information
-                final String post_key=getRef(position).getKey();
+                final String trip_key=getRef(position).getKey();
+                final String putExtraDay=model.getTrip_day();
 
                 viewHolder.setName(model.getTrip_name());
                 viewHolder.setDay(model.getTrip_day());
@@ -261,7 +262,10 @@ public class TripActivity extends AppCompatActivity{
                     @Override
                     public void onClick(View v) {
 
-                        Log.d(TAG, "FirebaseRecyclerView: name : "+post_key);
+                        Log.d(TAG, "FirebaseRecyclerView: name : "+trip_key);
+                        Intent intent= new Intent(mContext, PlanActivity.class);
+                        intent.putExtra(getString(R.string.trip_key), trip_key);
+                        startActivity(intent);
                     }
                 });
                 viewHolder.img_delete.setOnClickListener(new View.OnClickListener() {
@@ -274,7 +278,8 @@ public class TripActivity extends AppCompatActivity{
                 viewHolder.img_edit.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Log.v("MainActivity", "Some text"); //show message on monitor
+                        Log.v("ItineraryActivity", "Some text"); //show message on monitor
+                        NavigateItinerary(putExtraDay, trip_key);
                     }
                 });
             }
@@ -289,6 +294,17 @@ public class TripActivity extends AppCompatActivity{
         if (mAuthListener != null) {
             mAuth.removeAuthStateListener(mAuthListener);
         }
+    }
+
+
+    // navigate to Itinerary, pass different trip_day
+    public void NavigateItinerary(String putExtraDay, String trip_key){
+
+        Intent intent = new Intent(mContext,ItineraryActivity.class);
+        intent.putExtra(getString(R.string.trip_day), putExtraDay);
+        intent.putExtra(getString(R.string.trip_key),trip_key);
+        startActivity(intent);
+
     }
 
 

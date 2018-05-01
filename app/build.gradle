@@ -41,16 +41,24 @@ dependencies {
     compile 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
 
     //firebase authentication
-    compile 'com.google.firebase:firebase-auth:10.2.6'
+    compile 'com.google.firebase:firebase-auth:11.0.0'
 
     //firebase database
-    compile 'com.google.firebase:firebase-database:10.2.6'
+    compile 'com.google.firebase:firebase-database:11.0.0'
 
     //firebase storage
-    compile 'com.google.firebase:firebase-storage:10.2.6'
+    compile 'com.google.firebase:firebase-storage:11.0.0'
 
     //firebase RecyclerView
     compile 'com.firebaseui:firebase-ui-database:0.4.0'
+
+
+
+    compile 'com.google.android.gms:play-services-location:11.0.0'
+    compile 'com.google.android.gms:play-services-places:11.0.0'
+    compile 'com.google.android.gms:play-services-auth:11.0.0'
+    compile 'com.google.android.gms:play-services-maps:11.0.0'
+    compile 'com.google.android.gms:play-services:11.0.0'
 }
 
 //Firebase

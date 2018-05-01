@@ -66,25 +66,20 @@ public class HomeFragment extends Fragment {
     }
 
     //  add the following username from database into a list
+    //  原本是從使用者的追蹤人找
+    //  改變後->只要是這個app的使用者的po文都可以看得到
+
     private void getFollowing(){
         Log.d(TAG, "getFollowing: searching for following");
-
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        Query query = reference
-                .child(getString(R.string.dbname_following))
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
+        DatabaseReference ref = FirebaseDatabase.getInstance().getReference();
+        Query tmp= ref.child("users");
+        tmp.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
                 for(DataSnapshot singleSnapshot : dataSnapshot.getChildren()){
-                    Log.d(TAG, "onDataChange: found user: " +
-                            singleSnapshot.child(getString(R.string.field_user_id)).getValue());
-
-                    mFollowing.add(singleSnapshot.child(getString(R.string.field_user_id)).getValue().toString());
+                    Log.d(TAG, "onDataChange: found user: " +singleSnapshot.getKey());
+                    mFollowing.add(singleSnapshot.getKey().toString());
                 }
-                // show self pictures
-                mFollowing.add(FirebaseAuth.getInstance().getCurrentUser().getUid());
-                // get the photos
                 getPhotos();
             }
 
@@ -95,6 +90,7 @@ public class HomeFragment extends Fragment {
         });
     }
 
+
     // get photos and other information, such as, comments, username and...... of the following users
     private void getPhotos(){
         Log.d(TAG, "getPhotos: getting photos");
@@ -103,42 +99,45 @@ public class HomeFragment extends Fragment {
         for(int i = 0; i < mFollowing.size(); i++){
             final int count = i;
             Query query = reference
-                    .child(getString(R.string.dbname_user_photos))
+                    .child("user_posts")
                     .child(mFollowing.get(i))
-                    .orderByChild(getString(R.string.field_user_id))
-                    .equalTo(mFollowing.get(i));
+                    .orderByChild(getString(R.string.field_user_id));
             query.addListenerForSingleValueEvent(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
-                    for(DataSnapshot singleSnapshot : dataSnapshot.getChildren()){
+                    Log.d(TAG, "datasnapshot: "+ dataSnapshot);
+                    if(dataSnapshot.getValue()!=null){
+                        for(DataSnapshot singleSnapshot : dataSnapshot.getChildren()){
+                            Log.d(TAG, "getchildren: "+ singleSnapshot);
 
-                        Photo photo = new Photo();
-                        Map<String, Object> objectMap = (HashMap<String, Object>) singleSnapshot.getValue();
+                            Photo photo = new Photo();
+                            Map<String, Object> objectMap = (HashMap<String, Object>) singleSnapshot.getValue();
 
-                        photo.setCaption(objectMap.get(getString(R.string.field_caption)).toString());
-                        photo.setTags(objectMap.get(getString(R.string.field_tags)).toString());
-                        photo.setPhoto_id(objectMap.get(getString(R.string.field_photo_id)).toString());
-                        photo.setUser_id(objectMap.get(getString(R.string.field_user_id)).toString());
-                        photo.setDate_created(objectMap.get(getString(R.string.field_date_created)).toString());
-                        photo.setImage_path(objectMap.get(getString(R.string.field_image_path)).toString());
+                            Log.d(TAG, " object here: "+ objectMap);
+                            photo.setCaption(objectMap.get(getString(R.string.field_caption)).toString());
+                            photo.setTags(objectMap.get(getString(R.string.field_tags)).toString());
+                            photo.setPhoto_id(objectMap.get(getString(R.string.field_photo_id)).toString());
+                            photo.setUser_id(objectMap.get(getString(R.string.field_user_id)).toString());
+                            photo.setDate_created(objectMap.get(getString(R.string.field_date_created)).toString());
+                            photo.setImage_path(objectMap.get(getString(R.string.field_image_path)).toString());
+                            photo.setTrip_key(objectMap.get("trip_key").toString());
 
-                        ArrayList<Comment> comments = new ArrayList<Comment>();
-                        for (DataSnapshot dSnapshot : singleSnapshot
-                                .child(getString(R.string.field_comments)).getChildren()){
-                            Comment comment = new Comment();
-                            comment.setUser_id(dSnapshot.getValue(Comment.class).getUser_id());
-                            comment.setComment(dSnapshot.getValue(Comment.class).getComment());
-                            comment.setDate_created(dSnapshot.getValue(Comment.class).getDate_created());
-                            comments.add(comment);
+                            ArrayList<Comment> comments = new ArrayList<Comment>();
+                            for (DataSnapshot dSnapshot : singleSnapshot
+                                    .child(getString(R.string.field_comments)).getChildren()){
+                                Comment comment = new Comment();
+                                comment.setUser_id(dSnapshot.getValue(Comment.class).getUser_id());
+                                comment.setComment(dSnapshot.getValue(Comment.class).getComment());
+                                comment.setDate_created(dSnapshot.getValue(Comment.class).getDate_created());
+                                comments.add(comment);
+                            }
+
+                            photo.setComments(comments);
+                            mPhotos.add(photo);
                         }
+                    }
+                    displayPhotos();
 
-                        photo.setComments(comments);
-                        mPhotos.add(photo);
-                    }
-                    if(count >= mFollowing.size() -1){
-                        //display our photos
-                        displayPhotos();
-                    }
                 }
 
                 @Override
@@ -154,13 +153,14 @@ public class HomeFragment extends Fragment {
         mPaginatedPhotos = new ArrayList<>();
         if(mPhotos != null){
             try{
+                // 使按照創照時間順序排列
                 Collections.sort(mPhotos, new Comparator<Photo>() {
                     @Override
                     public int compare(Photo o1, Photo o2) {
                         return o2.getDate_created().compareTo(o1.getDate_created());
                     }
                 });
-
+                //
                 int iterations = mPhotos.size();
 
                 if(iterations > 10){

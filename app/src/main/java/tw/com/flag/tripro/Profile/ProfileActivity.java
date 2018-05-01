@@ -87,6 +87,7 @@ public class ProfileActivity extends AppCompatActivity implements
 
     }
 
+
     // init 有兩種情況
     /*
     case 1 : 來到ProfileActivity時帶有Extra

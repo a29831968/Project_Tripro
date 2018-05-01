@@ -118,7 +118,8 @@ public class ViewCommentsFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Log.d(TAG, "onClick: navigating back");
-                if(getCallingActivityFromBundle().equals(getString(R.string.home_activity))){
+                Log.d(TAG, "onClick: navigating back: "+ getString(R.string.home_activity));
+                if(getCallingActivityFromBundle() != null && getCallingActivityFromBundle().equals(getString(R.string.home_activity))){
                     getActivity().getSupportFragmentManager().popBackStack();
                     ((HomeActivity)getActivity()).showLayout();
                 }else{

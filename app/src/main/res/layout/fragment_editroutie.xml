@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"  >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/grey_border_bottom"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_magnify"
+            android:layout_weight="1"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/mOrigin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:hint="Searching for Origin"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black"
+            android:textSize="18dp"
+            android:imeOptions="actionSearch"
+            android:layout_weight="8"/>
+
+        <ImageView
+            android:id="@+id/place_info_origin"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_info"
+            android:layout_weight="1"/>
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/grey_border_bottom"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_magnify"
+            android:layout_weight="1"/>
+
+        <AutoCompleteTextView
+            android:id="@+id/mDestination"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:hint="Searching for Destination"
+            android:textColor="@android:color/black"
+            android:textColorHint="@color/black"
+            android:textSize="18dp"
+            android:imeOptions="actionSearch"
+            android:layout_weight="8"/>
+
+        <ImageView
+            android:id="@+id/place_info_destination"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_info"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/grey_border_bottom"
+        android:orientation="horizontal">
+
+
+
+        <Button
+            android:id="@+id/btn_path"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Path" />
+
+
+
+
+        <TextView
+            android:id="@+id/txv_showDistance"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:text="xx min" />
+
+
+
+        <TextView
+            android:id="@+id/txv_showDuration"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="14dp"
+            android:textColor="@color/black"
+            android:text="xx km" />
+
+        <Button
+            android:id="@+id/btn_savePath"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="SAVE" />
+
+
+
+    </LinearLayout>
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+
+</LinearLayout>
+

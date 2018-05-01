@@ -55,6 +55,8 @@ public class FirebaseMethods {
     private Context mContext;
     private double mPhotoUploadProgress = 0;
 
+    private String trip_key;
+
     public FirebaseMethods(Context context) {
         mAuth = FirebaseAuth.getInstance();
         mFirebaseDatabase = FirebaseDatabase.getInstance();
@@ -68,9 +70,10 @@ public class FirebaseMethods {
     }
 
     public void uploadNewPhoto(String photoType, final String caption,final int count, final String imgUrl,
-                               Bitmap bm){
+                               Bitmap bm, String key){
         Log.d(TAG, "uploadNewPhoto: attempting to uplaod new photo.");
-
+        Log.d(TAG, "uploadNewPhoto: key/trip_key: "+ key);
+        trip_key=key;
         FilePaths filePaths = new FilePaths();
         //case1) new photo
         if(photoType.equals(mContext.getString(R.string.new_photo))){
@@ -209,6 +212,8 @@ public class FirebaseMethods {
         photo.setTags(tags);
         photo.setUser_id(FirebaseAuth.getInstance().getCurrentUser().getUid());
         photo.setPhoto_id(newPhotoKey);
+        photo.setTrip_key(trip_key);
+        Log.d(TAG, "addPhotoToDatabase:trip_key: "+ trip_key);
 
         //insert into database
         myRef.child(mContext.getString(R.string.dbname_user_photos))

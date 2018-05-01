@@ -34,6 +34,7 @@ import java.util.TimeZone;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 import tw.com.flag.tripro.Home.HomeActivity;
+import tw.com.flag.tripro.Plan.ItineraryShowActivity;
 import tw.com.flag.tripro.Profile.ProfileActivity;
 import tw.com.flag.tripro.R;
 import tw.com.flag.tripro.models.Comment;
@@ -75,6 +76,8 @@ public class MainfeedListAdapter extends ArrayAdapter<Photo> {
         TextView username, timeDetla, caption, likes, comments;
         SquareImageView image;
         ImageView heartRed, heartWhite, comment;
+        // for trip detail
+        ImageView ivEllipses;
 
         UserAccountSettings settings = new UserAccountSettings();
         User user  = new User();
@@ -110,6 +113,8 @@ public class MainfeedListAdapter extends ArrayAdapter<Photo> {
             holder.photo = getItem(position);
             holder.detector = new GestureDetector(mContext, new GestureListener(holder));
             holder.users = new StringBuilder();
+            //
+            holder.ivEllipses=(ImageView) convertView.findViewById(R.id.ivEllipses);
 
             convertView.setTag(holder);
 
@@ -125,6 +130,21 @@ public class MainfeedListAdapter extends ArrayAdapter<Photo> {
 
         //set the caption
         holder.caption.setText(getItem(position).getCaption());
+
+
+        holder.ivEllipses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // test
+
+                Log.d(TAG, "onClick: loading comment thread for " + getItem(position).getPhoto_id());
+                Intent intent = new Intent(mContext, ItineraryShowActivity.class);
+                intent.putExtra(mContext.getString(R.string.field_user_id),getItem(position).getUser_id());
+                Log.d(TAG, "trip_key is null: "+getItem(position).getTrip_key());
+                intent.putExtra(mContext.getString(R.string.trip_key),getItem(position).getTrip_key());
+                mContext.startActivity(intent);
+            }
+        });
 
         //set the comment
         List<Comment> comments = getItem(position).getComments();

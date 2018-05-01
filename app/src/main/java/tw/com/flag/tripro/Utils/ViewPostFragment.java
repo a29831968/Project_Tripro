@@ -1,6 +1,7 @@
 package tw.com.flag.tripro.Utils;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
@@ -37,10 +38,12 @@ import java.util.Locale;
 import java.util.Map;
 import java.util.TimeZone;
 
+import tw.com.flag.tripro.Plan.ItineraryShowActivity;
 import tw.com.flag.tripro.R;
 import tw.com.flag.tripro.models.Comment;
 import tw.com.flag.tripro.models.Like;
 import tw.com.flag.tripro.models.Photo;
+import tw.com.flag.tripro.models.Trip;
 import tw.com.flag.tripro.models.User;
 import tw.com.flag.tripro.models.UserAccountSettings;
 
@@ -91,6 +94,8 @@ public class ViewPostFragment extends Fragment {
     private String mLikesString = "";
     private User mCurrentUser;
 
+    private String userId;
+    private String trip_key;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -144,6 +149,11 @@ public class ViewPostFragment extends Fragment {
                         newPhoto.setUser_id(objectMap.get(getString(R.string.field_user_id)).toString());
                         newPhoto.setDate_created(objectMap.get(getString(R.string.field_date_created)).toString());
                         newPhoto.setImage_path(objectMap.get(getString(R.string.field_image_path)).toString());
+                        newPhoto.setTrip_key(objectMap.get("trip_key").toString());
+
+                        userId=objectMap.get(getString(R.string.field_user_id)).toString();
+                        trip_key=objectMap.get("trip_key").toString();
+                        Log.d(TAG, " trip_key: "+ objectMap.get("trip_key").toString());
 
                         List<Comment> commentsList = new ArrayList<Comment>();
                         for (DataSnapshot dSnapshot : singleSnapshot
@@ -160,7 +170,8 @@ public class ViewPostFragment extends Fragment {
 
                         getCurrentUser();
                         getPhotoDetails();
-                        //getLikesString();
+                        // little bug here
+                        getLikesString();
 
                     }
 
@@ -463,6 +474,16 @@ public class ViewPostFragment extends Fragment {
                 Log.d(TAG, "onClick: navigating back");
                 mOnCommentThreadSelectedListener.onCommentThreadSelectedListener(mPhoto);
 
+            }
+        });
+
+        mEllipses.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), ItineraryShowActivity.class);
+                intent.putExtra(getActivity().getString(R.string.field_user_id),userId);
+                intent.putExtra(getActivity().getString(R.string.trip_key),trip_key);
+                getActivity().startActivity(intent);
             }
         });
 

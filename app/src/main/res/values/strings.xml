@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">InstagramClone</string>
 
+
+
+
+
     <!-- fragment names -->
     <string name="edit_profile_fragment">Edit Profile</string>
     <string name="view_post_fragment">View Post</string>
@@ -20,7 +24,7 @@
     <string name="dbname_users">users</string>
     <string name="dbname_user_account_settings">user_account_settings</string>
     <string name="dbname_photos">photos</string>
-    <string name="dbname_user_photos">user_photos</string>
+    <string name="dbname_user_photos">user_posts</string>
     <string name="dbname_following">following</string>
     <string name="dbname_followers">followers</string>
     <string name="field_username">username</string>
@@ -50,6 +54,15 @@
     <string name="selected_bitmap">selected_bitmap</string>
     <string name="return_to_fragment">return_to_fragment</string>
     <string name="intent_user">intent_user</string>
+    <string name="trip_day">trip_day</string>
+    <string name="trip_key">trip_key</string>
+    <string name="chosen_day">chosen_day</string>
+
+    <!-- Intent Extra for differentiate the activity you come from -->
+    <string name="edit_routie">edit_routie</string>
+    <string name="new_routie">new_routie</string>
+    <string name="routieOption">routieOption</string>
+
 
     <!-- Bundle arg names -->
     <string name="activity_number">activity_number</string>
@@ -67,6 +80,8 @@
     <string name="string_open_camera">Open Camera</string>
     <string name="string_next">Next</string>
     <string name="string_share">Share</string>
+
+
 
 
 </resources>
