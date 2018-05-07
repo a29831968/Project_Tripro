@@ -18,6 +18,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.GridView;
 import android.widget.ImageView;
 import android.widget.ProgressBar;
@@ -40,6 +41,8 @@ import java.util.List;
 import java.util.Map;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+import tw.com.flag.tripro.Home.ChatActivity;
+import tw.com.flag.tripro.Home.ChatDetails;
 import tw.com.flag.tripro.R;
 import tw.com.flag.tripro.Utils.BottomNavigationViewHelper;
 import tw.com.flag.tripro.Utils.FirebaseMethods;
@@ -91,6 +94,8 @@ public class ProfileFragment extends Fragment {
     private ImageView profileMenu;
     private BottomNavigationViewEx bottomNavigationView;
     private Context mContext;
+    private TextView textSend;
+    private TextView txtshare, txtitineray;
 
 
     //vars
@@ -117,9 +122,15 @@ public class ProfileFragment extends Fragment {
         profileMenu = (ImageView) view.findViewById(R.id.profileMenu);
         bottomNavigationView = (BottomNavigationViewEx) view.findViewById(R.id.bottomNavViewBar);
         mContext = getActivity();
+        txtitineray=(TextView)view.findViewById(R.id.textItinerary);
+        txtshare=(TextView)view.findViewById(R.id.textShare);
         mFirebaseMethods = new FirebaseMethods(getActivity());
         Log.d(TAG, "onCreateView: stared.");
-
+        mItinerary.setVisibility(View.INVISIBLE);
+        mShare.setVisibility(View.INVISIBLE);
+        txtitineray.setVisibility(View.INVISIBLE);
+        txtshare.setVisibility(View.INVISIBLE);
+        textSend=(TextView)view.findViewById(R.id.textSend);
 
         // set up bottom navigation
         setupBottomNavigationView();
@@ -132,6 +143,32 @@ public class ProfileFragment extends Fragment {
         // after set up "Firebase object", it will check if the user is log in or not every time back to this fragment
         setupFirebaseAuth();
 
+        DatabaseReference mDatabase = FirebaseDatabase.getInstance().getReference().child("user_account_settings");
+        Query query=mDatabase.orderByChild("user_id").equalTo(mAuth.getCurrentUser().getUid());
+        query.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                for(DataSnapshot singleSnapshot: dataSnapshot.getChildren()){
+                    Log.d(TAG, "addValueEvent"+singleSnapshot);
+                    ChatDetails.display_name =singleSnapshot.getValue(UserAccountSettings.class).getDisplay_name();
+
+                    Log.d(TAG, "displayname:"+ChatDetails.display_name);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+        textSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent=new Intent(getActivity(), ChatActivity.class);
+                intent.putExtra(getActivity().getString(R.string.field_display_name),ChatDetails.display_name);
+                startActivity(intent);
+            }
+        });
 
         // set up the data of GridView
         setupGridView();

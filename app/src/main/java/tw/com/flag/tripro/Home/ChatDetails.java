@@ -5,8 +5,8 @@ package tw.com.flag.tripro.Home;
  */
 
 public class ChatDetails {
-    static String display_name = "";
-    static String current_display_name = "";
-    static String current_uid = "";
-    static String chat_uid = "";
+    public static String display_name = "";
+    public static String current_display_name = "";
+    public static String current_uid = "";
+    public static String chat_uid = "";
 }
