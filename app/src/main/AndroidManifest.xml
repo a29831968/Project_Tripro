@@ -42,6 +42,7 @@
         <activity android:name=".Plan.EditRoutieFragment"></activity>
         <activity android:name=".Plan.MapActivity"></activity>
         <activity android:name=".Plan.ItineraryShowActivity"></activity>
+        <activity android:name=".Home.ChatActivity"></activity>
 
 
         <meta-data

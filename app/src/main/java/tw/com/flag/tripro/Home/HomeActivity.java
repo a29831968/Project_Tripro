@@ -15,8 +15,11 @@ import android.view.View;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
+import com.firebase.geofire.GeoFire;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx;
 import com.nostra13.universalimageloader.core.ImageLoader;
 
@@ -64,6 +67,11 @@ public class HomeActivity extends AppCompatActivity implements
     private ViewPager mViewPager;
     private FrameLayout mFrameLayout;
     private RelativeLayout mRelativeLayout;
+
+
+    // for GeoFire
+    private DatabaseReference mLocation;
+    private GeoFire geoFire;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -206,6 +214,11 @@ public class HomeActivity extends AppCompatActivity implements
                 if (user != null) {
                     // User is signed in
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
+
+                    //GeoFire
+                    mLocation= FirebaseDatabase.getInstance().getReference().child("MapUsers");
+                    geoFire = new GeoFire(mLocation);
+
                 } else {
                     // User is signed out
                     Log.d(TAG, "onAuthStateChanged:signed_out");
