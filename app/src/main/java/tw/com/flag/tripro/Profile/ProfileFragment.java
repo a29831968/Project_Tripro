@@ -268,54 +268,7 @@ public class ProfileFragment extends Fragment {
         });
     }
 
-    /*
-    private void getFollowersCount(){
-        mFollowersCount = 0;
 
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        Query query = reference.child(getString(R.string.dbname_followers))
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot singleSnapshot :  dataSnapshot.getChildren()){
-                    Log.d(TAG, "onDataChange: found follower:" + singleSnapshot.getValue());
-                    mFollowersCount++;
-                }
-                mFollowers.setText(String.valueOf(mFollowersCount));
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-    }
-    */
-    /*
-    private void getFollowingCount(){
-        mFollowingCount = 0;
-
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
-        Query query = reference.child(getString(R.string.dbname_following))
-                .child(FirebaseAuth.getInstance().getCurrentUser().getUid());
-        query.addListenerForSingleValueEvent(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot singleSnapshot :  dataSnapshot.getChildren()){
-                    Log.d(TAG, "onDataChange: found following user:" + singleSnapshot.getValue());
-                    mFollowingCount++;
-                }
-                mFollowing.setText(String.valueOf(mFollowingCount));
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-    }
-    */
 
 
     // after assure the user is login, it will retrieve data from Firebase and set up the information of the user.
@@ -392,6 +345,7 @@ public class ProfileFragment extends Fragment {
                     Log.d(TAG, "onAuthStateChanged:signed_in:" + user.getUid());
                 } else {
                     // User is signed out
+                    textSend.setVisibility(View.INVISIBLE);
                     Log.d(TAG, "onAuthStateChanged:signed_out");
                 }
                 // ...
