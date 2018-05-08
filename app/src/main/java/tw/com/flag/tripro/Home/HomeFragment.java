@@ -102,7 +102,7 @@ public class HomeFragment extends Fragment {
                     .child("user_posts")
                     .child(mFollowing.get(i))
                     .orderByChild(getString(R.string.field_user_id));
-            query.addListenerForSingleValueEvent(new ValueEventListener() {
+            query.addValueEventListener(new ValueEventListener() {
                 @Override
                 public void onDataChange(DataSnapshot dataSnapshot) {
                     Log.d(TAG, "datasnapshot: "+ dataSnapshot);

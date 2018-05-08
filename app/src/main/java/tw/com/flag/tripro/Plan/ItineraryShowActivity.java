@@ -2,6 +2,7 @@ package tw.com.flag.tripro.Plan;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -12,6 +13,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -23,6 +25,9 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
+import com.nostra13.universalimageloader.core.ImageLoader;
+import com.nostra13.universalimageloader.core.assist.FailReason;
+import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 
 import tw.com.flag.tripro.R;
 import tw.com.flag.tripro.models.Itinerary;
@@ -64,6 +69,8 @@ public class ItineraryShowActivity extends AppCompatActivity {
     private Button newRoutie;
     private Spinner spinner;
     private RecyclerView itinerary_list;
+    private ImageView page_photo;
+    private TextView name, date, dayNum;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -74,6 +81,10 @@ public class ItineraryShowActivity extends AppCompatActivity {
         itinerary_list=(RecyclerView) findViewById(R.id.itinerary_list);
         //itinerary_list.setHasFixedSize(true);
         itinerary_list.setLayoutManager(new LinearLayoutManager(this));
+        page_photo=(ImageView)findViewById(R.id.page_photo);
+        name=(TextView)findViewById(R.id.name);
+        dayNum=(TextView)findViewById(R.id.day);
+        date=(TextView)findViewById(R.id.date);
 
         spinner=(Spinner) findViewById(R.id.spinner);
     }
@@ -85,6 +96,7 @@ public class ItineraryShowActivity extends AppCompatActivity {
         Log.d(TAG, "onStart... ");
 
         getExtra();
+        setTop();
 
 
     }
@@ -256,6 +268,46 @@ public class ItineraryShowActivity extends AppCompatActivity {
 
             @Override
             public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+    }
+
+    // set the top snippet
+    void setTop(){
+        DatabaseReference data = FirebaseDatabase.getInstance().getReference().child("user_trips")
+                .child(userId).child("trips").child(trip_key);
+        data.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                dayNum.setText(dataSnapshot.getValue(Trip.class).getTrip_day().toString());
+                date.setText(dataSnapshot.getValue(Trip.class).getStart_date().toString());
+                name.setText(dataSnapshot.getValue(Trip.class).getTrip_name().toString());
+
+                ImageLoader imageLoader = ImageLoader.getInstance();
+
+                imageLoader.displayImage("file:/"+dataSnapshot.getValue(Trip.class).getImage(), page_photo, new ImageLoadingListener() {
+                    @Override
+                    public void onLoadingStarted(String imageUri, View view) {
+                    }
+
+                    @Override
+                    public void onLoadingFailed(String imageUri, View view, FailReason failReason) {
+                    }
+
+                    @Override
+                    public void onLoadingComplete(String imageUri, View view, Bitmap loadedImage) {
+                    }
+
+                    @Override
+                    public void onLoadingCancelled(String imageUri, View view) {
+                    }
+                });
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
 
             }
         });
