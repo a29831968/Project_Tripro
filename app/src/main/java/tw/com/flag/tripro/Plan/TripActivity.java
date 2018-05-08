@@ -198,33 +198,6 @@ public class TripActivity extends AppCompatActivity{
         });
     }
 
-    // show photos
-    /*
-    public void showTrip(){
-        Query reference=FirebaseDatabase.getInstance().getReference().child("user_trips").child(user.getUid()).child("trips");
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(DataSnapshot dataSnapshot) {
-                for(DataSnapshot singleSnapshot : dataSnapshot.getChildren()){
-
-
-                    Log.d(TAG, " show name"+singleSnapshot.child("trip_name").getValue());
-                    Log.d(TAG, " show day"+singleSnapshot.child("trip_day").getValue());
-                    Log.d(TAG, " show date"+singleSnapshot.child("start_date").getValue());
-
-                }
-            }
-
-            @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
-        });
-
-    }
-    */
-
-
     // will set up the Firebase object when create this Fragment.
     @Override
     public void onStart() {
