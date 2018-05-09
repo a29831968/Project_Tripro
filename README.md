@@ -54,16 +54,20 @@ Description
 
 This is the guide for users to know how to use this app correctly. Including the introduction of utilities and features.
 
-Guide
-![image](https://drive.google.com/drive/folders/1yjtY1myWBPY56gvxEhMvW-oQzMfq5Gjj)
-- Home Page
 
->>>Tool bar intro.
+<h3>Guide</h3>
+
+
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/32082896_10204477813181476_6642363198974459904_n.png" height="680" width="360"><img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/32162811_10204477813141475_7771527027558973440_n.png" height="680" width="360">
+
+<h4>- Home Page</h4>
+
+<h5>Tool bar intro.</h5>
 
 1. Bottom Navigation Bar enable you to navigate to other pages.
 2. Top tool bar offer options for you to choose to stay in home page or navigate to chat page.
 
->>>Main content intro.
+<h5>Main content intro.</h5>
 
 1. The center part shows the username, eclipse button, picture, like button, comment button, post descriptions, view more button and created time.
 2. Press username can navigate to profile page.
@@ -75,13 +79,15 @@ Guide
 
 
 
-- Chat Page
-
->>>Page 1
+<h4>- Chat Page</h4>
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-09%2018.26.04.png
+" height="680" width="360"><img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/%E8%9E%A2%E5%B9%95%E5%BF%AB%E7%85%A7%202018-05-09%2018.26.50.png
+" height="680" width="360">
+<h5>Page 1</h5>
 
 1. Choose whoever you would like to chat with from the list and select it, it would navigate to the private chat page 2 with the one you select it.
 
->>>Page 2
+<h5>Page 2</h5>
 
 1. Bottom box allows you to text your message, and the rest part is the place where shows the messages.
 
@@ -89,7 +95,7 @@ Guide
 
 
 
-- Comment page
+<h4>- Comment page</h4>
 
 1. The comments already posted will show on it.
 2. Bottom box allows you to write down your own comment.
@@ -99,27 +105,27 @@ Guide
 
 
 
-- Post Details
+<h4>- Post Details</h4>
 
->>>Page 1
+<h5>Page 1</h5>
 
 1. Include the basic information of the trip you post.
 
->>>Page 2
+<h5>Page 2</h5>
 
 1. Include all the details of the trip, such as when to go, where to go and how long it will take.
 
 
 
-- Trips page
+<h4>- Trips page</h4>
 
->>>Tool bar intro.
+<h5>Tool bar intro.</h5>
 
 1. Top tool bar includes the add button, it allows you to add new trip in your Trips page.
 2. After press add button, it will navigate to the Info page.
 3. Bottom Navigation bar allows you to navigate to other pages.
 
->>>Main content intro.
+<h5>Main content intro.</h5>
 
 1. The center part shows all the trips you have planed before, including posted and non posted one.
 2. There shows post, edit and remove buttons in each trip view.
@@ -131,7 +137,7 @@ Guide
 
 
 
-- Info page
+<h4>- Info page</h4>
 
 1. Enter the information of your planning trip.
 2. Upload photo allows you to upload photo from gallery or take photo immediately.
@@ -141,7 +147,7 @@ Guide
 
 
 
-- Itinerary page
+<h4>- Itinerary page</h4>
 
 1. Top part of this page shows the basic information of the trip you selected from previous.
 2. Spinner allows you to change the day of the trip.
@@ -149,7 +155,7 @@ Guide
 4. Center part includes all the itineraries you have added before.
 5. You can edit the route and show the path by EDIT ROUTIE/SHOW ROUTIE buttons.
 
-- Itinerary Details page
+<h4>- Itinerary Details page</h4>
 
 1. Search the places of the origin and destination.
 2. PATH button allows you to know how far and how much time it will take.
@@ -159,7 +165,7 @@ Guide
 
 
 
-- Google Search page
+<h4>- Google Search page</h4>
 
 1. As you can see, this map will show your current location.
 2. This map can also show other users around you (5km), and display the username on it.
@@ -169,7 +175,7 @@ Guide
 
 
 
-- Search page
+<h4>- Search page</h4>
 
 1. Blank box allows you to enter the username and navigate to the profile page of that user.
 2. Bottom Navigation bar allows you to navigate to other pages.
@@ -178,14 +184,14 @@ Guide
 
 
 
-- Profile page
+<h4>- Profile page</h4>
 
->>>Tool bar intro.
+<h5>Tool bar intro.</h5>
 
 1. Bottom Navigation bar allows you to navigate to other pages.
 2. Top right button allows you to go to account setting page.
 
->>>Main content intro.
+<h5>Main content intro.</h5>
 
 1. Top of this part shows the information of the user, including profile picture, display name, username and self introduction.
 2. The press to connect allows user to directly chat with this user.
@@ -194,7 +200,7 @@ Guide
 
 
 
-- Account Setting page
+<h4>- Account Setting page</h4>
 
 1. Edit profile allows you to navigate to Edit profile page.
 2. The user can sign out after press sign out button.
@@ -203,7 +209,7 @@ Guide
 
 
 
-- Edit Profile page
+<h4>- Edit Profile page</h4>
 
 1. This page is for the user to edit self settings, including the private settings and display settings.
 2. Press top right image can save the changes you have edited.
