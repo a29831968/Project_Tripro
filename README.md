@@ -66,10 +66,8 @@ This is the guide for users to know how to use this app correctly. Including the
 </p>
 <br>
 <h5>Tool bar intro.</h5>
-<br>
 1. Bottom Navigation Bar enable you to navigate to other pages.
 2. Top tool bar offer options for you to choose to stay in home page or navigate to chat page.
-<br>
 <br>
 <h5>Main content intro.</h5>
 1. The center part shows the username, eclipse button, picture, like button, comment button, post descriptions, view more button and created time.
@@ -119,7 +117,6 @@ This is the guide for users to know how to use this app correctly. Including the
 <h4>- Trips page</h4>
 <img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/6.png" height="680" width="360">
 <h5>Tool bar intro.</h5>
-<br>
 1. Top tool bar includes the add button, it allows you to add new trip in your Trips page.
 2. After press add button, it will navigate to the Info page.
 3. Bottom Navigation bar allows you to navigate to other pages.
@@ -179,12 +176,10 @@ This is the guide for users to know how to use this app correctly. Including the
 <h4>- Profile page</h4>
 <img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/12.png" height="680" width="360">
 <h5>Tool bar intro.</h5>
-<br>
 1. Bottom Navigation bar allows you to navigate to other pages.
 2. Top right button allows you to go to account setting page.
 <br>
 <h5>Main content intro.</h5>
-<br>
 1. Top of this part shows the information of the user, including profile picture, display name, username and self introduction.
 2. The press to connect allows user to directly chat with this user.
 3. Rest part shows the grid view images; these are the posts this user has posted before. After click the image, it will navigate to the photo page.
