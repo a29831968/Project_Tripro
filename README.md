@@ -93,7 +93,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 
-- Comment page
+<h4>- Comment page</h4>
 
 1. The comments already posted will show on it.
 2. Bottom box allows you to write down your own comment.
@@ -103,27 +103,27 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 
-- Post Details
+<h4>- Post Details</h4>
 
->>>Page 1
+<h5>Page 1</h5>
 
 1. Include the basic information of the trip you post.
 
->>>Page 2
+<h5>Page 2</h5>
 
 1. Include all the details of the trip, such as when to go, where to go and how long it will take.
 
 
 
-- Trips page
+<h4>- Trips page</h4>
 
->>>Tool bar intro.
+<h5>Tool bar intro.</h5>
 
 1. Top tool bar includes the add button, it allows you to add new trip in your Trips page.
 2. After press add button, it will navigate to the Info page.
 3. Bottom Navigation bar allows you to navigate to other pages.
 
->>>Main content intro.
+<h5>Main content intro.</h5>
 
 1. The center part shows all the trips you have planed before, including posted and non posted one.
 2. There shows post, edit and remove buttons in each trip view.
@@ -135,7 +135,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 
-- Info page
+<h4>- Info page</h4>
 
 1. Enter the information of your planning trip.
 2. Upload photo allows you to upload photo from gallery or take photo immediately.
@@ -145,7 +145,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 
-- Itinerary page
+<h4>- Itinerary page</h4>
 
 1. Top part of this page shows the basic information of the trip you selected from previous.
 2. Spinner allows you to change the day of the trip.
@@ -153,7 +153,7 @@ This is the guide for users to know how to use this app correctly. Including the
 4. Center part includes all the itineraries you have added before.
 5. You can edit the route and show the path by EDIT ROUTIE/SHOW ROUTIE buttons.
 
-- Itinerary Details page
+<h4>- Itinerary Details page</h4>
 
 1. Search the places of the origin and destination.
 2. PATH button allows you to know how far and how much time it will take.
@@ -163,7 +163,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 
-- Google Search page
+<h4>- Google Search page</h4>
 
 1. As you can see, this map will show your current location.
 2. This map can also show other users around you (5km), and display the username on it.
@@ -173,7 +173,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 
-- Search page
+<h4>- Search page</h4>
 
 1. Blank box allows you to enter the username and navigate to the profile page of that user.
 2. Bottom Navigation bar allows you to navigate to other pages.
@@ -182,14 +182,14 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 
-- Profile page
+<h4>- Profile page</h4>
 
->>>Tool bar intro.
+<h5>Tool bar intro.</h5>
 
 1. Bottom Navigation bar allows you to navigate to other pages.
 2. Top right button allows you to go to account setting page.
 
->>>Main content intro.
+<h5>Main content intro.</h5>
 
 1. Top of this part shows the information of the user, including profile picture, display name, username and self introduction.
 2. The press to connect allows user to directly chat with this user.
@@ -198,7 +198,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 
-- Account Setting page
+<h4>- Account Setting page</h4>
 
 1. Edit profile allows you to navigate to Edit profile page.
 2. The user can sign out after press sign out button.
@@ -207,7 +207,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 
-- Edit Profile page
+<h4>- Edit Profile page</h4>
 
 1. This page is for the user to edit self settings, including the private settings and display settings.
 2. Press top right image can save the changes you have edited.
