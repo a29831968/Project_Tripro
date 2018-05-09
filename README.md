@@ -56,8 +56,8 @@ This is the guide for users to know how to use this app correctly. Including the
 
 Guide
 
-![image](https://github.com/a29831968/Project_Tripro/blob/master/pic/32082896_10204477813181476_6642363198974459904_n.png){:height="24px" width="48px"}
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/32082896_10204477813181476_6642363198974459904_n.png" height="24" width="48">
+
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/32082896_10204477813181476_6642363198974459904_n.png" height="500" width="360">
 - Home Page
 
 >>>Tool bar intro.
