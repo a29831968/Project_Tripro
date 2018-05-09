@@ -67,7 +67,7 @@ This is the guide for users to know how to use this app correctly. Including the
 1. Bottom Navigation Bar enable you to navigate to other pages.
 2. Top tool bar offer options for you to choose to stay in home page or navigate to chat page.
 
->>>Main content intro.
+<h5>Main content intro.</h5>
 
 1. The center part shows the username, eclipse button, picture, like button, comment button, post descriptions, view more button and created time.
 2. Press username can navigate to profile page.
@@ -79,13 +79,13 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 
-- Chat Page
+<h4>- Chat Page</h4>
 
->>>Page 1
+<h5>Page 1</h5>
 
 1. Choose whoever you would like to chat with from the list and select it, it would navigate to the private chat page 2 with the one you select it.
 
->>>Page 2
+<h5>Page 2</h5>
 
 1. Bottom box allows you to text your message, and the rest part is the place where shows the messages.
 
