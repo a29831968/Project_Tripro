@@ -147,6 +147,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Itinerary page</h4>
+
 <img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/8.png" height="680" width="360">
 1. Top part of this page shows the basic information of the trip you selected from previous.
 2. Spinner allows you to change the day of the trip.
