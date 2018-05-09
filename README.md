@@ -94,8 +94,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Comment page</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/3.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/3.png" height="680" width="360">
 1. The comments already posted will show on it.
 2. Bottom box allows you to write down your own comment.
 3. Top arrow bottom can take you back to home page.
@@ -105,9 +104,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Post Details</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/4.png
-" height="680" width="360"><img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/5.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/4.png" height="680" width="360"><img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/5.png" height="680" width="360">
 <h5>Page 1</h5>
 
 1. Include the basic information of the trip you post.
@@ -119,8 +116,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Trips page</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/6.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/6.png" height="680" width="360">
 <h5>Tool bar intro.</h5>
 
 1. Top tool bar includes the add button, it allows you to add new trip in your Trips page.
@@ -140,8 +136,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Info page</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/7.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/7.png" height="680" width="360">
 
 1. Enter the information of your planning trip.
 2. Upload photo allows you to upload photo from gallery or take photo immediately.
@@ -152,8 +147,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Itinerary page</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/8.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/8.png" height="680" width="360">
 1. Top part of this page shows the basic information of the trip you selected from previous.
 2. Spinner allows you to change the day of the trip.
 3. NEW ROUNTIE button allows you to navigate to Itinerary Details page to add new spot for this trip.
@@ -162,9 +156,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Itinerary Details page</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/9.png
-" height="680" width="360"><img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/2.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/9.png" height="680" width="360">
 1. Search the places of the origin and destination.
 2. PATH button allows you to know how far and how much time it will take.
 3. SAVE button allows you to save this itinerary into your plan.
@@ -174,8 +166,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Google Search page</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/10.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/10.png" height="680" width="360">
 1. As you can see, this map will show your current location.
 2. This map can also show other users around you (5km), and display the username on it.
 3. Bottom Navigation bar allows you to navigate to other pages.
@@ -185,8 +176,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Search page</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/11.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/11.png" height="680" width="360">
 1. Blank box allows you to enter the username and navigate to the profile page of that user.
 2. Bottom Navigation bar allows you to navigate to other pages.
 
@@ -195,8 +185,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Profile page</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/12.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/12.png" height="680" width="360">
 <h5>Tool bar intro.</h5>
 
 1. Bottom Navigation bar allows you to navigate to other pages.
@@ -212,8 +201,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Account Setting page</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/13.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/13.png" height="680" width="360">
 1. Edit profile allows you to navigate to Edit profile page.
 2. The user can sign out after press sign out button.
 
@@ -222,7 +210,6 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Edit Profile page</h4>
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/14.png
-" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/14.png" height="680" width="360">
 1. This page is for the user to edit self settings, including the private settings and display settings.
 2. Press top right image can save the changes you have edited.
