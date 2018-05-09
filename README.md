@@ -56,7 +56,7 @@ This is the guide for users to know how to use this app correctly. Including the
 
 Guide
 
-
+![alt text](https://drive.google.com/drive/folders/1yjtY1myWBPY56gvxEhMvW-oQzMfq5Gjj)
 - Home Page
 
 >>>Tool bar intro.
