@@ -80,9 +80,6 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <h4>- Chat Page</h4>
-Solarized dark             |  Solarized Ocean
-:-------------------------:|:-------------------------:
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/1.png" height="680" width="360"> |  <img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/2.png" height="680" width="360">
 <img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/1.png" height="680" width="360"><img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/2.png" height="680" width="360">
 <h5>Page 1</h5>
 
