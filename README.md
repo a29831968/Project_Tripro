@@ -59,9 +59,10 @@ This is the guide for users to know how to use this app correctly. Including the
 
 
 <img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/32082896_10204477813181476_6642363198974459904_n.png" height="680" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/32162811_10204477813141475_7771527027558973440_n.png" height="680" width="360">
 - Home Page
 
->>>Tool bar intro.
+<h5>Tool bar intro.</h5>
 
 1. Bottom Navigation Bar enable you to navigate to other pages.
 2. Top tool bar offer options for you to choose to stay in home page or navigate to chat page.
