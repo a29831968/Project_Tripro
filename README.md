@@ -55,9 +55,7 @@ Description
 This is the guide for users to know how to use this app correctly. Including the introduction of utilities and features.
 <br>
 <br>
-<br>
-<h3>Guide</h3>
-<br>
+<h2>Guide</h2>
 <br>
 <h4>- Home Page</h4>
 <p float="left">
