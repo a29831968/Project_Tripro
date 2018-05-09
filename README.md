@@ -55,10 +55,10 @@ Description
 This is the guide for users to know how to use this app correctly. Including the introduction of utilities and features.
 
 
-#Guide
+<h3>Guide</h3>
 
 
-<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/32082896_10204477813181476_6642363198974459904_n.png" height="600" width="360">
+<img src="https://github.com/a29831968/Project_Tripro/blob/master/pic/32082896_10204477813181476_6642363198974459904_n.png" height="680" width="360">
 - Home Page
 
 >>>Tool bar intro.
