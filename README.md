@@ -59,12 +59,12 @@ Guide
 
 - Home Page
 
-Tool bar intro.
+  Tool bar intro.
 
 1. Bottom Navigation Bar enable you to navigate to other pages.
 2. Top tool bar offer options for you to choose to stay in home page or navigate to chat page.
 
-Main content intro.
+  Main content intro.
 
 1. The center part shows the username, eclipse button, picture, like button, comment button, post descriptions, view more button and created time.
 2. Press username can navigate to profile page.
@@ -78,11 +78,11 @@ Main content intro.
 
 - Chat Page
 
-Page 1
+  Page 1
 
 1. Choose whoever you would like to chat with from the list and select it, it would navigate to the private chat page 2 with the one you select it.
 
-Page 2
+  Page 2
 
 1. Bottom box allows you to text your message, and the rest part is the place where shows the messages.
 
@@ -102,11 +102,11 @@ Page 2
 
 - Post Details
 
-Page 1
+  Page 1
 
 1. Include the basic information of the trip you post.
 
-Page 2
+  Page 2
 
 1. Include all the details of the trip, such as when to go, where to go and how long it will take.
 
@@ -114,13 +114,13 @@ Page 2
 
 - Trips page
 
-Tool bar intro.
+  Tool bar intro.
 
 1. Top tool bar includes the add button, it allows you to add new trip in your Trips page.
 2. After press add button, it will navigate to the Info page.
 3. Bottom Navigation bar allows you to navigate to other pages.
 
-Main content intro.
+  Main content intro.
 
 1. The center part shows all the trips you have planed before, including posted and non posted one.
 2. There shows post, edit and remove buttons in each trip view.
@@ -181,12 +181,12 @@ Main content intro.
 
 - Profile page
 
-Tool bar intro.
+  Tool bar intro.
 
 1. Bottom Navigation bar allows you to navigate to other pages.
 2. Top right button allows you to go to account setting page.
 
-Main content intro.
+  Main content intro.
 
 1. Top of this part shows the information of the user, including profile picture, display name, username and self introduction.
 2. The press to connect allows user to directly chat with this user.
