@@ -2,7 +2,7 @@ Project
 =======
 
 - Name: Tripro
-- Developer: Po-Chun, Yang
+- Developer: Po-Chun Yang
 - Co-worker: none
 - Duration: 2017/10-2018/5
 - Introduction:
